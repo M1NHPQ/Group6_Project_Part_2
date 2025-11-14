@@ -1,0 +1,281 @@
+/* Author: Pham Quang Minh, Le Trinh Hai Nam */
+/* CSS might've required the help from various sources for the navigation bar, mainly the use of flexbox (display: flex) */
+
+h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+body{
+    min-height: 100vh;       /* body size is ever as big as the content*/
+    margin: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: linear-gradient(to right, rgb(0, 127, 190), rgb(158, 0, 158));
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+/* Navigation for all pages (header)*/
+
+header{
+    margin: 0px;
+}
+
+.nav_bar{
+    background-color: rgb(106, 106, 106);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Logo_nav{
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.logo{
+    height: 4rem;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.Logo_nav figure{
+    text-align: center;
+}
+
+nav ul{
+    list-style: none;
+    margin: 0px;
+}
+
+.menu li{
+    display: inline-block;
+}
+
+.menu a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    text-align: center;
+}
+
+.menu a:hover{
+    background-color: rgb(162, 162, 162);
+}
+
+/* footer */
+
+footer{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+    position: relative;
+    bottom: 0;
+    background-color: rgb(106, 106, 106);
+    color: white;
+}
+
+/* about.html */
+
+.about_mainbody{
+    font-size: 1.3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+}
+
+.photo_section{
+    float: right;
+    clear: left;
+}
+
+
+.group_photo{
+    border: 1px black solid;
+    text-align: center;
+    width: 30%;
+    display: block;
+    text-align: center;
+}
+
+.group_photo img{
+    width: 30%;
+    border: 1px solid black;
+}
+
+.interest_table, .interest_table th, .interest_table td{
+    border: 1px solid white;
+}
+
+.name_and_time{
+    float: left;
+    margin-bottom: 2rem;
+}
+
+.studentID{
+    float: right;
+}
+
+.Tutor_Name{
+    float: left;
+    clear: left;
+}
+
+.Contribution_list{
+    float: left;
+    clear: left;
+}
+
+.Interests{
+    clear: both;
+}
+
+.interest_table{
+    margin: auto;            /* Centers the table*/
+    background-color: rgb(0, 0, 113);
+}
+
+.interest_table th:hover, .interest_table td:hover{
+    color: rgb(255, 143, 143);
+}
+/* index.html */
+
+#index_body{
+    background-image: url(/images/index_background.jpg);
+    background-size: 100vw;
+}
+
+#index_main{
+    margin-left: 20rem;
+    margin-right: 20rem;
+    font-size: 1rem;
+}
+
+.index_main_links{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.index_main_links a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1rem 1.3rem;
+    background-color: rgb(107, 48, 225);
+}
+
+.index_main_links a:hover{
+    background-color: rgb(70, 32, 148);
+}
+
+#github_link{
+    text-decoration: none;
+    color: white;
+}
+
+#github_link:hover{
+    color: blue;
+}
+
+/* apply.html */
+
+.apply_form{
+    padding-left: 20rem;
+    padding-right: 20rem;
+    font-size: 1.3rem;
+}
+
+
+.apply_form input::placeholder, .other_skills textarea::placeholder{
+    color: white;
+}
+
+.apply_form input, .other_skills textarea, #Ref_Num, #State{
+    border: black 2px solid;
+}
+
+#First_Name, #Last_Name, #Street_Address, #Suburb-Town, #Email, #Phone_Number, .other_skills textarea{
+    width: 100%;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    background-color: rgb(162, 162, 162);
+    color: white;
+}
+
+#Ref_Num ,#Birth_Date, #State, #Postcode{
+    font-size: 1.3rem;
+    background-color: rgb(162, 162, 162);
+    color: white;
+}
+
+.field_1, .field_2, .field_3, .field_4{
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.field_2, .field_4s_child_check{
+    display: flex;
+    justify-content: space-between;
+}
+
+#States_and_Code{
+    display: flex;
+    justify-content: space-between;
+}
+
+.parent_field{
+    padding: 10px;
+    margin: 15px;
+}
+
+.other_skills{
+    text-align: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
+}
+
+.other_skills textarea{
+    width: 100%;
+    height: 5rem;
+    font-size: 1.3rem;
+}
+
+.final{
+    justify-content: center;
+    display: flex;
+}
+
+.final_child{
+    margin: 5px;
+    font-size: 1.3rem;
+}
+
+
+/* jobs.html */
+.jobs_mainbody{
+    margin-left: 20rem;
+    margin-right: 20rem;
+}
+
+.Jobs_aside_1{
+    float: right;
+    width: 20rem;
+}
+
+#cloud-heading, #cyber-heading{
+    text-align: center;
+    border-bottom: 1px solid white;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: 0.3rem;
+}
