@@ -12,9 +12,9 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(to right, rgb(0, 127, 190), rgb(158, 0, 158));
     color: white;
-    display: flex;
+    /*display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between;*/
 }
 
 
@@ -26,7 +26,7 @@ header{
 
 .nav_bar{
     background-color: rgb(106, 106, 106);
-    padding: 0px;
+    padding: 0px 2rem;
     margin: 0px;
     overflow: hidden;
     display: flex;
@@ -46,8 +46,10 @@ header{
     margin-right: 15px;
 }
 
-.Logo_nav figure{
-    text-align: center;
+
+
+.Logo_nav h2{
+    border-bottom: white solid 3px;
 }
 
 nav ul{
@@ -65,10 +67,15 @@ nav ul{
     text-decoration: none;
     padding: 15px;
     text-align: center;
+    background-color: rgb(79, 79, 79);
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    border-radius: 5px;
 }
 
 .menu a:hover{
-    background-color: rgb(162, 162, 162);
+    background-color: rgb(123, 123, 123);
+    transition-duration: 1s;
 }
 
 /* footer */
@@ -81,9 +88,10 @@ footer{
     bottom: 0;
     background-color: rgb(106, 106, 106);
     color: white;
+
 }
 
-/* about.html */
+/* about.php */
 
 .about_mainbody{
     font-size: 1.3rem;
@@ -145,10 +153,10 @@ footer{
 .interest_table th:hover, .interest_table td:hover{
     color: rgb(255, 143, 143);
 }
-/* index.html */
+/* index.php */
 
 #index_body{
-    background-image: url(/images/index_background.jpg);
+    background-image: url(../images/index_background.jpg);
     background-size: 100vw;
 }
 
@@ -187,7 +195,7 @@ footer{
     color: blue;
 }
 
-/* apply.html */
+/* apply.php */
 
 .apply_form{
     padding-left: 20rem;
@@ -261,7 +269,7 @@ footer{
 }
 
 
-/* jobs.html */
+/* jobs.php */
 .jobs_mainbody{
     margin-left: 20rem;
     margin-right: 20rem;
@@ -278,4 +286,36 @@ footer{
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 0.3rem;
+}
+
+/* manage.php */
+
+.eoi_form_1, .eoi_form_2, .eoi_form_3, .eoi_form_4, .eoi_form_5{
+    display: none;
+}
+
+#visi_form1:checked ~ .eoi_form_1 {
+    display: block;
+}
+
+#visi_form2:checked ~ .eoi_form_2 {
+    display: block;
+}
+
+#visi_form3:checked ~ .eoi_form_3 {
+    display: block;
+}
+
+#visi_form4:checked ~ .eoi_form_4 {
+    display: block;
+}
+
+#visi_form5:checked ~ .eoi_form_5 {
+    display: block;
+}
+
+.manage_mainbody{
+    font-size: 1.3rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
 }

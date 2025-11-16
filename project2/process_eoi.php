@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if (mysqli_query($conn, $insert_sql)) {
         // Get the auto-generated EOInumber
         $eoi_number = mysqli_insert_id($conn);
-        echo "<h2>✅ Thank you, $first_name!</h2>";
+        echo "<h2>Thank you, $first_name.</h2>";
         echo "<p>Your Expression of Interest has been submitted successfully.</p>";
         echo "<p><strong>Your EOI Number:</strong> $eoi_number</p>";
     } else {

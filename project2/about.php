@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Page</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <?php
@@ -50,7 +50,7 @@
             <div class="photo_section">
                 <h3>Group Photo</h3>
                 <figure class="group_photo">
-                    <img src="/images/Maxwell.jpg" alt="">
+                    <img src="./images/Maxwell.jpg" alt="">
                     <figcaption>Due to unavoidable circumstances we have none</figcaption>
                 </figure>
             </div>

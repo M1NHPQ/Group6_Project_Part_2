@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
 <title>Amphoreus Careers - Job Opportunities</title>
-<link rel="stylesheet" href="/styles/styles.css">
+<link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body id="index_body">
     <?php
@@ -25,10 +25,10 @@
     </ul>
     <h1>Pages</h1>
     <div class="index_main_links">
-        <p><a href="index.html">Home</a></p>
-        <p><a href="about.html">About</a></p>
-        <p><a href="jobs.html">Jobs</a></p>
-        <p><a href="apply.html">Apply</a></p>
+        <p><a href="index.php">Home</a></p>
+        <p><a href="about.php">About</a></p>
+        <p><a href="jobs.php">Jobs</a></p>
+        <p><a href="apply.php">Apply</a></p>
     </div>
 
 </main>

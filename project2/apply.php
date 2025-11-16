@@ -1,16 +1,10 @@
-<?php
-
-
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apply</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">               <!-- I hate path finding -->
 </head>
 <body>
     <?php
@@ -25,8 +19,8 @@
                 <label for="Ref_Num">Job reference number</label>
                 <select name="Ref_Num" id="Ref_Num" required>
                     <option value="">Select</option>
-                    <option value="Ref_ID_01">A0001</option>
-                    <option value="Ref_ID_02">A0002</option>
+                    <option value="A0001">A0001</option>
+                    <option value="A0002">A0002</option>
                 </select>
                 <br>
                 <label for="First_Name">First Name:</label>
@@ -36,7 +30,7 @@
                 <input type="text" name="Last_Name" id="Last_Name" placeholder="Max: 20 Alphabetical Characters" pattern="[A-Za-z]{1,20}" title="Inappropriate input" required>
                 <br>
                 <label for="Birth_Date">Date of Birth:</label>
-                <input type="text" name="Birth_Date" id="Birth_Date" pattern="^([01][0-9]|2[0-3]):[0-5][0-9]$" title="Inappropriate input"  placeholder="dd/mm/yyyy" required>
+                <input type="date" name="Birth_Date" id="Birth_Date" required>
             </fieldset>
             <fieldset class="field_2">
                 <legend>Gender</legend>
@@ -87,7 +81,7 @@
             </fieldset>
             <fieldset class="field_4">
                 <label for="Email">Email Address</label>
-                <input type="text" name="Email" id="Email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" placeholder="example.com" title="Inappropriate input" required>
+                <input type="text" name="Email" id="Email" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" placeholder="example@email.com" title="Inappropriate input" required>
                 <label for="Phone_Number">Phone Number</label>
                 <input type="text" name="Phone Number" id="Phone_Number" pattern="[0-9 ]{8,12}" placeholder="8 - 12 digits or spaces" title="Inappropriate input" required>
                 <fieldset class="field_4s_child_check">

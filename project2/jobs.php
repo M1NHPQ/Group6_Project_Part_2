@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Cloud Engineer and Cybersecurity - Job Descriptions</title>
-    <link rel="stylesheet" href="/styles/styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
     <?php
