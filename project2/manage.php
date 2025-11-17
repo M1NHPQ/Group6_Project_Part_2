@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if (!isset($_SESSION['username'])) {                 //please head to admin_login.php first
+        header("Location: admin_login.php");
+        exit();
+    };
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,9 +28,9 @@
             <label for="visi_form1">Display All EOIs</label>
 
             <form method="POST" action="manage.php" class="eoi_form_1">
-            <input type="hidden" name="action" value="list_all">
-            <button type="submit">List All EOIs</button>
-        </form>
+                <input type="hidden" name="action" value="list_all">
+                <button type="submit">List All EOIs</button>
+            </form>
         </div>
 
         <div>    <!--EOIs by Job Ref Num-->
@@ -44,10 +52,10 @@
             <form method="POST" action="manage.php" class="eoi_form_3">
                 <input type="hidden" name="action" value="list_by_name">
                 <label>First Name:</label>
-                <input type="text" name="firstname">
+                <input type="text" name="firstname" required>
                 <br>
                 <label>Last Name:</label>
-                <input type="text" name="lastname">
+                <input type="text" name="lastname" required>
                 <button type="submit">Search</button>
             </form>
         </div>
@@ -74,7 +82,7 @@
                 <input type="text" name="eoi_num" required>
                 <br>
                 <label>New Status:</label>
-                <select name="status" required>
+                <select name="status" class='manage_status_change_select' required>
                     <option value="New">New</option>
                     <option value="Current">Current</option>
                     <option value="Final">Final</option>
@@ -93,8 +101,8 @@
 
         <?php                                  //display table
         require_once 'settings.php';
-        $query = "SELECT * FROM eoi";
 
+        $query = "SELECT * FROM eoi";
         $result = mysqli_query($conn, $query);
 
     function show_table($result){                    //function shows table with corresponding 'value'

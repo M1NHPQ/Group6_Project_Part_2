@@ -21,6 +21,10 @@ main{
     flex: 1;
 }
 
+input[type="checkbox"] {
+    accent-color: rgb(0, 250, 0);
+}
+
 
 /* Navigation for all pages (header)*/
 
@@ -174,19 +178,41 @@ footer{
     justify-content: space-between;
 }
 
-
-
+.index_admin_links{
+    display: flex;
+    justify-content: space-evenly;
+}
 
 .index_main_links a{
     text-decoration: none;
     color: white;
     display: block;
     padding: 1rem 1.3rem;
+    border-radius: 5px;
     background-color: rgb(107, 48, 225);
 }
 
+.index_admin_links a{
+    text-decoration: none;
+    color: white;
+    display: block;
+    padding: 1rem 1.3rem;
+    border-radius: 5px;
+    background-color: rgb(225, 48, 48);
+}
+
+
+
 .index_main_links a:hover{
     background-color: rgb(70, 32, 148);
+    transform: translateY(-5px);
+    transition-duration: 1s;
+}
+
+.index_admin_links a:hover{
+    background-color: rgb(136, 34, 34);
+    transform: translateY(-5px);
+    transition-duration: 1s;
 }
 
 #github_link{
@@ -301,6 +327,21 @@ footer{
 
 .eoi_form_1, .eoi_form_2, .eoi_form_3, .eoi_form_4, .eoi_form_5{
     display: none;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.eoi_form_2 input, .eoi_form_3 input, .eoi_form_4 input, .eoi_form_5 input {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+    background-color: rgb(162, 162, 162);
+    color: white;
+}
+
+.manage_status_change_select{
+    font-size: 1.3rem;
+    background-color: rgb(162, 162, 162);
+    color: white;
 }
 
 #visi_form1:checked ~ .eoi_form_1 {
@@ -329,6 +370,14 @@ footer{
     margin-right: 5rem;
 }
 
+.manage_mainbody button{
+    font-size: 1.3rem;
+}
+
+.manage_mainbody div{
+    margin: 1rem;
+}
+
 .manage_page_table{
     text-align: center;
     display: block;
@@ -337,13 +386,11 @@ footer{
 .manage_page_table th{
     border: rgb(41, 255, 187) 2px solid;
     color: rgb(41, 255, 187);
-    padding: 0.2rem;
 }
 
 .manage_page_table td{
     border: white 2px solid;
     color: white;
-    padding: 0.2rem;
 }
 
 #table_invisi_toggle:checked ~ .manage_page_table{
@@ -357,4 +404,31 @@ footer{
 #table_invisi_toggle, #table_visi_toggle{
     height: 20px;
     width: 20px;
+}
+
+/* admin_login.php */
+.admin_login_page_main div{
+    text-align: center;
+    margin: 1.5rem;
+}
+
+.admin_login_page_main input{
+    font-size: 1.3rem;
+    background-color: rgb(162, 162, 162);
+    color: white;
+}
+
+.admin_login_page_main label{
+    font-size: 1.3rem;
+    color: white;
+}
+
+.manage_mainbody input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+}
+
+.enhancement_page_main{
+    margin-left: 5rem;
+    margin-right: 5rem;
 }
