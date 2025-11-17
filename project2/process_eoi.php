@@ -39,7 +39,7 @@ mysqli_query($conn, $eoi_sql);
 //if table exists
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    // Collect form data safely
+    // security
     $ref_num = mysqli_real_escape_string($conn, $_POST['Ref_Num']);
     $first_name = mysqli_real_escape_string($conn, $_POST['First_Name']);
     $last_name = mysqli_real_escape_string($conn, $_POST['Last_Name']);
@@ -58,7 +58,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $skill4 = isset($_POST['PHP']) ? 'PHP' : '';
     $skill5 = isset($_POST['C#']) ? 'C#' : '';
 
-    // Insert into database
+    // insert into database
     $insert_sql = "
         INSERT INTO eoi 
         (job_reference_number, first_name, last_name, street_address, suburb_town, state, postcode, email, phone, skill1, skill2, skill3, skill4, skill5, other_skills)
@@ -67,7 +67,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     ";
 
     if (mysqli_query($conn, $insert_sql)) {
-        // Get the auto-generated EOInumber
+        //auto-generated EOInumber
         $eoi_number = mysqli_insert_id($conn);
         echo "<h2>Thank you, $first_name.</h2>";
         echo "<p>Your Expression of Interest has been submitted successfully.</p>";

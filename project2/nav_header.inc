@@ -1,7 +1,7 @@
     <header>
         <nav class="nav_bar">
             <div class="Logo_nav">
-                <img src="../images/World_Amphoreus.jpg" alt="Ampho logo" class="logo">
+                <img src="./images/World_Amphoreus.jpg" alt="Ampho logo" class="logo">
                 <h2>Amphoreus - The Eternal Land</h2>
             </div>
             <ul class="menu">

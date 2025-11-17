@@ -11,9 +11,9 @@
         include 'nav_header.inc';
     ?>
 
-    <h1>Management Page</h1>
 
     <main class="manage_mainbody">      <!--Note: post will send a hidden value with name "action" prompting table types through each 'value'-->
+        <h1>Management Page</h1>
         <h2>Form Toggle:</h2>
         <div>    <!--List ALL EOIs-->
             <input type="checkbox" name="visi" id="visi_form1">       <!-- checkbox to toggle visible/invisible forms -->
@@ -45,6 +45,7 @@
                 <input type="hidden" name="action" value="list_by_name">
                 <label>First Name:</label>
                 <input type="text" name="firstname">
+                <br>
                 <label>Last Name:</label>
                 <input type="text" name="lastname">
                 <button type="submit">Search</button>
@@ -71,6 +72,7 @@
                 <input type="hidden" name="action" value="update_status">
                 <label>EOI Number:</label>
                 <input type="text" name="eoi_num" required>
+                <br>
                 <label>New Status:</label>
                 <select name="status" required>
                     <option value="New">New</option>
@@ -80,46 +82,24 @@
                 <button type="submit">Update</button>
             </form>
         </div>
-    </main>
+        <br>
+        <input type="radio" name="table_visi" id="table_invisi_toggle">            <!-- hide current table -->
+        <label for="table_invisi_toggle">Hide Current Table</label>
+        <input type="radio" name="table_visi" id="table_visi_toggle">            <!-- show current table -->
+        <label for="table_visi_toggle">Show Current Table</label>
 
 
+        
 
+        <?php                                  //display table
+        require_once 'settings.php';
+        $query = "SELECT * FROM eoi";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</body>
-</html>
-
-<?php
-    require_once 'settings.php';
-    $query = "SELECT * FROM eoi";
-
-    $result = mysqli_query($conn, $query);
+        $result = mysqli_query($conn, $query);
 
     function show_table($result){                    //function shows table with corresponding 'value'
         if (mysqli_num_rows($result) > 0){                 //if the table returns rows
-        echo "<table style='text-align: center; border: black solid 1px'>";       //headers of table
+        echo "<table class='manage_page_table'>";       //headers of table
         echo "<thead>";
         echo "<tr>";
         echo "<th>EOI Num</th>";
@@ -162,7 +142,8 @@
         echo "<td>" . $row['other_skills'] . "</td>";
         echo "<td>" . $row['status'] . "</td>";
         echo "</tr>";
-    };
+        };
+        echo "</table>";
     } else{
         echo "<p>no EOIs could be found.</p>";
     };
@@ -221,8 +202,14 @@
     }
 
     mysqli_close($conn);
-?> 
+    ?> 
+    </main>
 
-<?php
-    include 'footer.inc';
-?>
+    <?php
+        include 'footer.inc';
+    ?>
+</body>
+</html>
+
+
+

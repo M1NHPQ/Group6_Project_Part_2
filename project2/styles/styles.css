@@ -12,9 +12,13 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-image: linear-gradient(to right, rgb(0, 127, 190), rgb(158, 0, 158));
     color: white;
-    /*display: flex;
+    display: flex;
     flex-direction: column;
-    justify-content: space-between;*/
+    min-height: 100vh;
+}
+
+main{
+    flex: 1;
 }
 
 
@@ -88,7 +92,6 @@ footer{
     bottom: 0;
     background-color: rgb(106, 106, 106);
     color: white;
-
 }
 
 /* about.php */
@@ -271,22 +274,28 @@ footer{
 
 /* jobs.php */
 .jobs_mainbody{
-    margin-left: 20rem;
-    margin-right: 20rem;
+    margin-left: 10rem;
+    margin-right: 10rem;
 }
 
-.Jobs_aside_1{
-    float: right;
-    width: 20rem;
-}
-
-#cloud-heading, #cyber-heading{
+.jobs_page_table{
     text-align: center;
-    border-bottom: 1px solid white;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-    padding: 0.3rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
+
+.jobs_page_table th{
+    border: rgb(41, 255, 187) 2px solid;
+    color: rgb(41, 255, 187);
+    padding: 0.2rem;
+}
+
+.jobs_page_table td{
+    border: white 2px solid;
+    color: white;
+    padding: 0.2rem;
+}
+
 
 /* manage.php */
 
@@ -318,4 +327,34 @@ footer{
     font-size: 1.3rem;
     margin-left: 5rem;
     margin-right: 5rem;
+}
+
+.manage_page_table{
+    text-align: center;
+    display: block;
+}
+
+.manage_page_table th{
+    border: rgb(41, 255, 187) 2px solid;
+    color: rgb(41, 255, 187);
+    padding: 0.2rem;
+}
+
+.manage_page_table td{
+    border: white 2px solid;
+    color: white;
+    padding: 0.2rem;
+}
+
+#table_invisi_toggle:checked ~ .manage_page_table{
+    display: none;
+}
+
+#table_visi_toggle:checked ~ .manage_page_table{
+    display: block;
+}
+
+#table_invisi_toggle, #table_visi_toggle{
+    height: 20px;
+    width: 20px;
 }

@@ -38,12 +38,15 @@
             </div>
 
             <div class="Contribution_list">
-                <h3>Members' Contribution</h3>
+                <h3>Members' Contribution (Part 2)</h3>
                 <dl>
                     <dt>Name: Pham Quang Minh</dt>
-                    <dd>about.html, apply.html, css</dd>
+                    <dd>I can proudly say that I did ALL the work, which is definitely not a good thing since I'm basically 
+                        playing hardmode for no reason at all. I created the database and all the tables of it, did all 
+                    the MySQL-related stuff, fixed some CSS, created the presentation. If the website looks bad, it is what it is, 
+                the bar was always low.</dd>
                     <dt>Name: Le Trinh Hai Nam</dt>
-                    <dd>jobs.html, index.html</dd>
+                    <dd>(the guy has been gone for weeks now so...)</dd>
                 </dl>
             </div>
 
@@ -51,7 +54,7 @@
                 <h3>Group Photo</h3>
                 <figure class="group_photo">
                     <img src="./images/Maxwell.jpg" alt="">
-                    <figcaption>Due to unavoidable circumstances we have none</figcaption>
+                    <figcaption>Due to unavoidable circumstances (this time it's justified) we have none, have this very normal cat (not evil) instead.</figcaption>
                 </figure>
             </div>
 
